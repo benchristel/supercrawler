@@ -1,5 +1,5 @@
 {
-  "name": "supercrawler",
+  "name": "@benchristel/supercrawler",
   "description": "A web crawler. Supercrawler automatically crawls websites. Define custom handlers to parse content. Obeys robots.txt, rate limits and concurrency limits.",
   "version": "0.16.0",
   "homepage": "https://github.com/brendonboshell/supercrawler",
@@ -7,7 +7,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brendonboshell/supercrawler.git"
+    "url": "git+https://github.com/benchristel/supercrawler.git"
   },
   "bugs": {
     "url": "https://github.com/brendonboshell/supercrawler/issues"
