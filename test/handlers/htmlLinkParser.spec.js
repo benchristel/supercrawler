@@ -114,6 +114,29 @@ describe("HtmlLikParser", function () {
     ]);
   });
 
+  it("can exclude specific hosts", function () {
+    var hlp = htmlLinkParser({
+          excludedHostnames: ["example2.com"]
+        }),
+        html;
+
+    html = makeHtmlWithLinks([
+      "/page2.html",
+      "page3.html",
+      "https://example.com/101?q=str",
+      "https://example2.com/55"
+    ]);
+
+    expect(hlp({
+      body: html,
+      url: "https://example.com/my/page.html"
+    })).to.deep.equal([
+      "https://example.com/page2.html",
+      "https://example.com/my/page3.html",
+      "https://example.com/101?q=str"
+    ]);
+  });
+
   it("identifies <link rel='alternative'> tags", function () {
     var hlp = htmlLinkParser(),
         html;
