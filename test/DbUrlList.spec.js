@@ -219,7 +219,7 @@ describe("DbUrlList", function () {
     it("inserts record into table", function (done) {
       new DbUrlList(opts).insertIfNotExists(makeUrl("https://example.com", 201)).then(function () {
         sinon.assert.calledWith(createSpy, sinon.match({
-          urlHash: "327c3fda87ce286848a574982ddd0b7c7487f816",
+          urlHash: "b559c7edd3fb67374c1a25e739cdd7edd1d79949",
           url: "https://example.com",
           statusCode: 201,
           errorCode: null,
@@ -264,7 +264,7 @@ describe("DbUrlList", function () {
         makeUrl("https://example.com/page2.html")
       ]).then(function () {
         sinon.assert.calledWith(bulkCreateSpy, sinon.match([sinon.match({
-          urlHash: "327c3fda87ce286848a574982ddd0b7c7487f816",
+          urlHash: "b559c7edd3fb67374c1a25e739cdd7edd1d79949",
           url: "https://example.com",
           statusCode: null,
           errorCode: null,
@@ -287,7 +287,7 @@ describe("DbUrlList", function () {
     it("upserts record in database", function (done) {
       new DbUrlList(opts).upsert(makeUrl("https://example.com", 201)).then(function () {
         sinon.assert.calledWith(upsertSpy, sinon.match({
-          urlHash: "327c3fda87ce286848a574982ddd0b7c7487f816",
+          urlHash: "b559c7edd3fb67374c1a25e739cdd7edd1d79949",
           url: "https://example.com",
           statusCode: 201,
           errorCode: null,
